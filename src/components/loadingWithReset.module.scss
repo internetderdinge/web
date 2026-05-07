@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.12);
+  border-top-color: rgba(0, 0, 0, 0.65);
+  animation: loadingWithResetSpin 0.9s linear infinite;
+}
+
+.content {
+  z-index: 100000000;
+  position: absolute;
+  top: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.message {
+  font-size: 0.9em;
+  opacity: 0.75;
+}
+
+.resetButton {
+  margin-top: 0.25rem;
+}
+
+.appVersion {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+@keyframes loadingWithResetSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
